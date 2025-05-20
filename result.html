@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crime Rate Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Crime Rate Predictor</h1>
+    <p>Let's reduce crime rate</p>
+  </div>
+
+  <div class="result-box">
+    <p><strong>Selected City Name:</strong> <span id="city"></span></p>
+    <p><strong>Selected Crime Type:</strong> <span id="crime"></span></p>
+    <p><strong>Selected Year:</strong> <span id="year"></span></p>
+    <hr>
+    <p><strong>Prediction:</strong> <span id="prediction">Very High Crime Area</span></p>
+    <p><strong>Estimated Crime Rate:</strong> <span id="rate"></span></p>
+    <p><strong>Estimated Number of Cases:</strong> <span id="cases"></span></p>
+    <p><strong>Population (in Lakhs):</strong> <span id="population"></span></p>
+    <button onclick="goBack()">Let's Check Again</button>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("city").textContent = params.get("city");
+    document.getElementById("crime").textContent = params.get("crime");
+    document.getElementById("year").textContent = params.get("year");
+
+    // Dummy values
+    document.getElementById("rate").textContent = (Math.random() * 30).toFixed(5);
+    document.getElementById("cases").textContent = Math.floor(Math.random() * 10000);
+    document.getElementById("population").textContent = (Math.random() * 300).toFixed(3);
+
+    function goBack() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
