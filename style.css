@@ -1,12 +1,12 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #00bfff;
+  background-color: #ad9c49cb;
   margin: 0;
   padding: 0;
 }
 
 .header {
-  background-color: #f36f21;
+  background-color: #6d300c;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -43,7 +43,7 @@ button {
   margin-top: 20px;
   width: 100%;
   padding: 12px;
-  background-color: navy;
+  background-color: #6d300c;
   color: white;
   font-size: 16px;
   border: none;
